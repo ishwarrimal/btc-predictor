@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import { setBtcPrice } from '../redux/gameSlice';
 
 const MAX_WAIT_TIME_SEC = 20 //Wait for 2 seconds before throwing error
