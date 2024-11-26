@@ -9,10 +9,12 @@ This is a Bitcoin price prediction game where users predict whether the price of
 ## Features
 
 1. **Authentication**: Users can authenticate using AWS Cognito for secure access.
-2. **API Integration**: The game interacts with APIs through AWS API Gateway to fetch real-time Bitcoin price data.
-3. **Score Storage**: Scores are stored in DynamoDB for tracking user performance.
+2. **API Integration**: The game interacts with APIs through AWS API Gateway to fetch real-time user's score.
+3. **Websockets**: The game uses an open endpoint of [coincap](wss://ws.coincap.io/prices?assets=bitcoin) for fetching live BTC price.
 4. **Game Logic**: The game predicts whether the Bitcoin price will go up or down in the next 30 seconds.
-5. **User Interface**: A simple and intuitive web interface is provided to facilitate user interaction.
+5. **User Interface**: A simple and intuitive web interface is provided to facilitate user interaction which is **mobile friendly**.
+6. **Score retention**: The game score is stored for each user in dynamodb, so you'll always get your latest score no matter which device you use.
+7. **CI/CD**: Have used github webhooks and github pages for CI/CD.
 
 ## Game Rules
 - **Objective**: Predict if the price of Bitcoin will go up or down in the next 30 seconds.
@@ -31,7 +33,7 @@ This is a Bitcoin price prediction game where users predict whether the price of
 
 1. **React**: The frontend is built using React for the user interface.
 2. **Redux**: Used for state management, especially for handling the requests for Bitcoin price updates and managing the game state.
-3. **TypeScript: TypeScript is used to ensure type safety and better code quality.
+3. **TypeScript**: TypeScript is used to ensure type safety and better code quality.
 4. **React Testing Library (RTL)**: Used for testing React components.
 
 ### Authentication:
