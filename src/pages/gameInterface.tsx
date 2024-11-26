@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import CurrentPriceCard from '../components/CurrentPriceCard';
 import GamePlayArea from '../components/GamePlayArea';
@@ -18,9 +18,11 @@ import ScoreCard from '../components/ScoreCard';
 import { getUserScore, postUserScore } from '../api/gameScore';
 
 function GameInterface() {
-  const { userPrediction, currentBtcPrice, lockedBtcPrice, userScore } = useSelector((state: RootState) => state.game);
+  let { userPrediction, currentBtcPrice, lockedBtcPrice, userScore } = useSelector((state: RootState) => state.game);
   const dispatch = useDispatch();
   const { signOut } = useAuthenticator()
+
+  const currentPriceRef = useRef(currentBtcPrice)
 
   useEffect(() => {
     fetchCryptoPrice(dispatch);
@@ -47,7 +49,8 @@ function GameInterface() {
   //Function to check the result and update the game state
   function checkAndUpdateResult(){
     if(!!userPrediction){
-      const priceDiff = currentBtcPrice - lockedBtcPrice;
+      const priceDiff = currentPriceRef.current - lockedBtcPrice;
+      debugger
       let tempScore = userScore
       if(priceDiff > 0 && userPrediction === "up" || priceDiff < 0 && userPrediction === "down" ){
         dispatch(setGameResult('win'))
@@ -62,7 +65,7 @@ function GameInterface() {
         dispatch(setGameResult(null))
         dispatch(setUserPrediction(null));
         dispatch(setTimer(30))
-      }, 2000)
+      }, 3000)
     }
   }
 
