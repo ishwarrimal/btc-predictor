@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/score": {
+      "name": "/score",
+      "lambdaFunction": "btcLambda",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

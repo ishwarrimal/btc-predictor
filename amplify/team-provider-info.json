@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-btcpredictor-dev-27faa-authRole",
+      "UnauthRoleArn": "arn:aws:iam::294477133844:role/amplify-btcpredictor-dev-27faa-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::294477133844:role/amplify-btcpredictor-dev-27faa-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-btcpredictor-dev-27faa-deployment",
+      "UnauthRoleName": "amplify-btcpredictor-dev-27faa-unauthRole",
+      "StackName": "amplify-btcpredictor-dev-27faa",
+      "StackId": "arn:aws:cloudformation:us-east-1:294477133844:stack/amplify-btcpredictor-dev-27faa/316ca3b0-abad-11ef-8ba4-0ec9fa0c1285",
+      "AmplifyAppId": "d14b3qgv2za6pm",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-btcpredictor-dev-27faa-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "btcpredictor3f744533": {}
+      },
+      "function": {
+        "btcLambda": {
+          "deploymentBucketName": "amplify-btcpredictor-dev-27faa-deployment",
+          "s3Key": "amplify-builds/btcLambda-4c704d727a304b7a3457-build.zip"
+        }
+      },
+      "storage": {
+        "dynamobtc": {}
+      },
+      "api": {
+        "apiBtc": {}
+      }
+    }
+  }
+}

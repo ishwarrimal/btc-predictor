@@ -5,18 +5,26 @@ import GamePlayArea from '../components/GamePlayArea';
 import fetchCryptoPrice from '../api/fetchCrypto';
 import { SECONDS_IN_MS } from '../constants/timeConstants';
 import { useSelector, useDispatch } from "react-redux";
-import { setGameResult, setTimer, setUserPrediction } from "../redux/gameSlice";
+import { IoMdExit } from "react-icons/io";
+import { withAuthenticator, useAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import { setGameResult, setTimer, setUserPrediction, setUserScore } from "../redux/gameSlice";
+
 
 import {
   RootState,
 } from "../redux/store";
 import ScoreCard from '../components/ScoreCard';
+import { getUserScore, postUserScore } from '../api/gameScore';
 
 function GameInterface() {
-  const { userPrediction, currentBtcPrice, lockedBtcPrice } = useSelector((state: RootState) => state.game);
+  const { userPrediction, currentBtcPrice, lockedBtcPrice, userScore } = useSelector((state: RootState) => state.game);
   const dispatch = useDispatch();
+  const { signOut } = useAuthenticator()
+
   useEffect(() => {
     fetchCryptoPrice(dispatch);
+    getUserScore(dispatch);
   },[])
 
   useEffect(() => {
@@ -40,11 +48,16 @@ function GameInterface() {
   function checkAndUpdateResult(){
     if(!!userPrediction){
       const priceDiff = currentBtcPrice - lockedBtcPrice;
+      let tempScore = userScore
       if(priceDiff > 0 && userPrediction === "up" || priceDiff < 0 && userPrediction === "down" ){
         dispatch(setGameResult('win'))
+        tempScore++
       }else{
+        tempScore--
         dispatch(setGameResult('lose'))
       }
+      dispatch(setUserScore(tempScore))
+      postUserScore(tempScore)
       setTimeout(() => {
         dispatch(setGameResult(null))
         dispatch(setUserPrediction(null));
@@ -58,6 +71,7 @@ function GameInterface() {
       <CurrentPriceCard/>
       <ScoreCard />
       <GamePlayArea />
+       <StyledLogout onClick={signOut}><IoMdExit /> Logout</StyledLogout>
     </GameInterfaceWrapper>
   );
 }
@@ -72,4 +86,14 @@ export const GameInterfaceWrapper = styled.div`
     padding: 24px;
 `;
 
-export default GameInterface;
+const StyledLogout = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  cursor: pointer;
+  background: #aaa;
+  padding: 0.3rem;
+  border-radius: 10px;
+`;
+
+export default withAuthenticator(GameInterface);

@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamobtc",
+  "tableName": "dynamobtc",
+  "partitionKey": {
+    "fieldName": "score",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

@@ -1,6 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { useGameContext } from "../context/gameContext";
+import { RootState } from "../redux/store";
 
 const ScoreCardContainer = styled.div`
   display: flex;
@@ -31,12 +32,13 @@ const ScoreCardContainer = styled.div`
 
 
 const ScoreCard = () => {
-  const {state: {userScore, isLoadingScore}} = useGameContext();
+  const { userScore, userScoreLoading } = useSelector((state: RootState) => state.game);
+
   return (
     <ScoreCardContainer>
      Your Score:{" "}
-      <span className={isLoadingScore ? "loading" : ""}>
-        {isLoadingScore ? "...Loading" : userScore}
+      <span className={userScoreLoading ? "loading" : ""}>
+        {userScoreLoading ? "...Loading" : userScore}
       </span>
     </ScoreCardContainer>
   );

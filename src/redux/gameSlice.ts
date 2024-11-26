@@ -3,6 +3,8 @@ import { ButtonType } from "../types";
 
 // Define the initial state
 interface GameState {
+  userScore: number;
+  userScoreLoading: boolean;
   timer: number;
   currentBtcPrice: number;
   lockedBtcPrice: number;
@@ -13,6 +15,8 @@ interface GameState {
 }
 
 const initialState: GameState = {
+  userScore: 0,
+  userScoreLoading: true,
   timer: 30,
   currentBtcPrice: 0,
   lockedBtcPrice: 0,
@@ -43,6 +47,10 @@ const gameSlice = createSlice({
       if(!!action.payload) {
         state.resultList.push(action.payload);
       }
+    },
+    setUserScore(state, action: PayloadAction<number>){
+      state.userScore = action.payload
+      state.userScoreLoading = false
     }
   },
 });
@@ -52,7 +60,8 @@ export const {
   setBtcPrice,
   setUserPrediction,
   setTimer,
-  setGameResult
+  setGameResult,
+  setUserScore
 } = gameSlice.actions;
 
 export default gameSlice.reducer;
