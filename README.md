@@ -2,6 +2,8 @@
 
 [![Deploy to GitHub Pages](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml)
 
+Game [Link](https://ishwarrimal.github.io/btc-predictor/)
+
 This is a Bitcoin price prediction game where users predict whether the price of Bitcoin will go up or down in the next 30 seconds. The game is designed using modern web technologies, and it allows users to authenticate using AWS Cognito, interact with APIs through AWS API Gateway, and store scores in DynamoDB.This README file provides an overview of the Bitcoin Price Predictor Game project, including its features, deployment process, and how to get started.
 
 ## Features
