@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/btc-predictor/static/css/main.2ae6a60b.css",
-    "main.js": "/btc-predictor/static/js/main.aa6deeae.js",
-    "static/js/453.d179f6b9.chunk.js": "/btc-predictor/static/js/453.d179f6b9.chunk.js",
-    "index.html": "/btc-predictor/index.html",
-    "main.2ae6a60b.css.map": "/btc-predictor/static/css/main.2ae6a60b.css.map",
-    "main.aa6deeae.js.map": "/btc-predictor/static/js/main.aa6deeae.js.map",
-    "453.d179f6b9.chunk.js.map": "/btc-predictor/static/js/453.d179f6b9.chunk.js.map"
+    "main.css": "/static/css/main.2ae6a60b.css",
+    "main.js": "/static/js/main.df9c695c.js",
+    "static/js/453.d179f6b9.chunk.js": "/static/js/453.d179f6b9.chunk.js",
+    "index.html": "/index.html",
+    "main.2ae6a60b.css.map": "/static/css/main.2ae6a60b.css.map",
+    "main.df9c695c.js.map": "/static/js/main.df9c695c.js.map",
+    "453.d179f6b9.chunk.js.map": "/static/js/453.d179f6b9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2ae6a60b.css",
-    "static/js/main.aa6deeae.js"
+    "static/js/main.df9c695c.js"
   ]
 }
