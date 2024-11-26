@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './btc-logo.png';
 import './App.css';
 import GameInterface from './pages/gameInterface';
 import GameRules from './components/GameRules';

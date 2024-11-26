@@ -18,9 +18,9 @@ const PredictionButtons = () => {
   const { userPrediction } = useSelector((state: RootState) => state.game);
   return (
     <ButtonContainer>
-      <Button direction="up" isSelected={userPrediction === "up"} disabled={!!(userPrediction)} 
+      <Button direction="up" disabled={!!(userPrediction)} 
         onClick={() => dispatch(setUserPrediction('up'))}>🔺 UP</Button>
-      <Button direction="down" isSelected={userPrediction === "down"} disabled={!!(userPrediction)} 
+      <Button direction="down" disabled={!!(userPrediction)} 
         onClick={() => dispatch(setUserPrediction('down'))}>🔻 DOWN</Button>
     </ButtonContainer>
   );

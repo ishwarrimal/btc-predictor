@@ -7,7 +7,6 @@ type ButtonType = "up" | "down";
 // Props interface for the Button component
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     direction: ButtonType;
-    isSelected: boolean
 }
 
 // Define dynamic styles based on the button type
@@ -26,7 +25,7 @@ const buttonStyles = {
   `,
 };
 
-const StyledButton = styled.button<{ direction: ButtonType, isSelected: boolean }>`
+const StyledButton = styled.button<{ direction: ButtonType }>`
   color: white;
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -42,9 +41,9 @@ const StyledButton = styled.button<{ direction: ButtonType, isSelected: boolean 
   }
 `;
 
-const Button: FC<ButtonProps> = ({ direction, children, isSelected, ...rest }) => {
+const Button: FC<ButtonProps> = ({ direction, children, ...rest }) => {
   return (
-    <StyledButton direction={direction} isSelected={isSelected}  {...rest}>
+    <StyledButton direction={direction}  {...rest}>
       {children}
     </StyledButton>
   );
