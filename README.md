@@ -2,7 +2,8 @@
 
 [![Deploy to GitHub Pages](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml)
 
-Game [Link](https://ishwarrimal.github.io/btc-predictor/)
+Game [Link](https://ishwarrimal.github.io/btc-predictor/)  
+**Screenshots attached at the end of readme**
 
 This is a Bitcoin price prediction game where users predict whether the price of Bitcoin will go up or down in the next 30 seconds. The game is designed using modern web technologies, and it allows users to authenticate using AWS Cognito, interact with APIs through AWS API Gateway, and store scores in DynamoDB.This README file provides an overview of the Bitcoin Price Predictor Game project, including its features, deployment process, and how to get started.
 
@@ -42,9 +43,9 @@ This is a Bitcoin price prediction game where users predict whether the price of
 
 ### Backend:
 
-**AWS API Gateway**: Serves as the API endpoint for the frontend to interact with.
-**AWS Lambda**: A serverless function used to process API requests, including fetching Bitcoin price and updating scores.
-**AWS DynamoDB**: Used for storing user scores and other game data.
+- **AWS API Gateway**: Serves as the API endpoint for the frontend to interact with.  
+- **AWS Lambda**: A serverless function used to process API requests, including fetching Bitcoin price and updating scores built using **NodeJS**.
+- **AWS DynamoDB**: Used for storing user scores.  
 
 
 ### Webhooks:
@@ -58,7 +59,7 @@ Follow the steps below to run the Bitcoin Price Prediction game locally on your 
 
 Before you begin, make sure you have the following installed:
 - [Node.js](https://nodejs.org/en/) (version 14.x or higher)
-- [npm](https://www.npmjs.com/) (or [Yarn](https://yarnpkg.com/))
+- [npm](https://www.npmjs.com/)
 
 ### Step 1: Clone the Repository
 
@@ -123,6 +124,33 @@ This will run the tests in watch mode, and you can see the results in the termin
 - **TypeScript**: TypeScript is a superset of JavaScript that adds static typing to the language. This ensures better code quality by catching errors during development, improving code readability, and enabling powerful developer tools such as autocomplete and type checking. TypeScript helps avoid common JavaScript pitfalls and enhances the development experience.
 
 - **React Testing Library (RTL)**: React Testing Library is used to test React components in a way that mimics how users interact with the application. RTL encourages testing from the user’s perspective, making the tests more reliable and focusing on component behavior rather than implementation details.
+
+## Future Scope
+
+The Bitcoin Price Prediction game has a solid foundation, but there are several areas for potential improvement and future enhancements to provide a better user experience and expand the game's reach. Below are some of the key features that could be added in the future:
+
+### 1. **Internationalization (i18n)**
+
+Currently, the game supports only a single language, but in the future, it could be localized to multiple languages to cater to a global audience. By using libraries like `react-intl` or `i18next`, we can easily add translations for various regions and languages. This will make the game more accessible and increase its potential user base across different countries.
+
+### 2. **Accessibility (a11y)**
+
+Ensuring the game is accessible to users with disabilities is a key goal. We can improve accessibility by implementing features like screen reader support, keyboard navigation, and high-contrast themes. Adhering to the WCAG (Web Content Accessibility Guidelines) will help make the game more inclusive, allowing people with diverse abilities to enjoy the game. Features such as alternative text for images, audio cues, and adjustable font sizes could be added in future updates.
+
+### 4. **Multi-Currency Support**
+
+While the game currently deals with Bitcoin, future versions could include other cryptocurrencies like Ethereum, Litecoin, or others. Implementing multi-currency support would allow users to predict the price changes of different cryptocurrencies, broadening the scope and appeal of the game. 
+
+### 5. **Real-Time Notifications**
+
+To enhance the game’s engagement, real-time notifications (e.g., via push notifications or in-app notifications) can be implemented. Users could receive updates about significant price movements or other important game events. This would encourage users to return and participate more frequently in the game.
+
+### 6. **Leaderboard & Social Features**
+
+To foster competition and user engagement, a global leaderboard could be added where players can see how their scores compare with others. Social features like sharing scores on social media, connecting with friends, and tracking personal progress can help build a community around the game.
+
+These features would not only improve the user experience but also provide greater scalability and ensure the game remains relevant as technology and user expectations evolve.
+
 
 ## Screenshots
 
