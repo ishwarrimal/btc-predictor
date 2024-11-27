@@ -50,7 +50,6 @@ function GameInterface() {
   function checkAndUpdateResult(){
     if(!!userPrediction){
       const priceDiff = currentPriceRef.current - lockedBtcPrice;
-      debugger
       let tempScore = userScore
       if(priceDiff > 0 && userPrediction === "up" || priceDiff < 0 && userPrediction === "down" ){
         dispatch(setGameResult('win'))
