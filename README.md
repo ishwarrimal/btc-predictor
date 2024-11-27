@@ -2,7 +2,7 @@
 
 [![Deploy to GitHub Pages](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml)
 
-![alt text](resources/ScreenRecording2024-11-27at7.52.40AM-ezgif.com-video-to-gif-converter.gif)
+![alt text](resources/game.gif)
 
 Game [Link](https://ishwarrimal.github.io/btc-predictor/)  
 **Screenshots attached at the end of readme**
