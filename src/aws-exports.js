@@ -36,7 +36,7 @@ const awsmobile = {
     "aws_cloud_logic_custom": [
         {
             "name": "apiBtc",
-            "endpoint": "https://ewymuwm8cd.execute-api.us-east-1.amazonaws.com/dev",
+            "endpoint": process.env.REACT_APP_AWS_GATEWAY_ENDPOINT,
             "region": "us-east-1"
         }
     ]

@@ -84,7 +84,9 @@ Create a .env file in the root directory of the project (if it doesn’t already
 REACT_APP_AWS_COGNITO_IDENTITY_POOL_ID=<your-identity-pool-id>
 REACT_APP_AWS_USER_POOL_ID=<your-user-pool-id>
 REACT_APP_AWS_USER_POOL_WEB_CLIENT_ID=<your-web-client-id>
+REACT_APP_AWS_GATEWAY_ENDPOINT=<your-gateway-endpoint>
 ```
+Note: Please update region of required in aws-exports.jswith your actual region.
 
 You can find the values for the Cognito environment variables in the AWS Cognito console:
 
