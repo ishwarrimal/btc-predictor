@@ -8,7 +8,6 @@ export const ENDPOINT = 'https://ewymuwm8cd.execute-api.us-east-1.amazonaws.com/
 export async function getUserScore(dispatch: Function) {
     try {
       const user = await getCurrentUser()
-      console.log(user)
       const restOperation = get({ 
         apiName: 'apiBtc',
         path: '/score',
