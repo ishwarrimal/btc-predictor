@@ -51,7 +51,7 @@ This is a Bitcoin price prediction game where users predict whether the price of
 - **AWS DynamoDB**: Used for storing user scores.  
 
 
-### Webhooks:
+### Websocket:
 Used to fetch the real-time Bitcoin price updates from an external service.
 
 ## How to Run Locally
