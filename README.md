@@ -134,25 +134,14 @@ This will run the tests in watch mode, and you can see the results in the termin
 
 The Bitcoin Price Prediction game has a solid foundation, but there are several areas for potential improvement and future enhancements to provide a better user experience and expand the game's reach. Below are some of the key features that could be added in the future:
 
-### 1. **Internationalization (i18n)**
-
-Currently, the game supports only a single language, but in the future, it could be localized to multiple languages to cater to a global audience. By using libraries like `react-intl` or `i18next`, we can easily add translations for various regions and languages. This will make the game more accessible and increase its potential user base across different countries.
-
-### 2. **Accessibility (a11y)**
-
-Ensuring the game is accessible to users with disabilities is a key goal. We can improve accessibility by implementing features like screen reader support, keyboard navigation, and high-contrast themes. Adhering to the WCAG (Web Content Accessibility Guidelines) will help make the game more inclusive, allowing people with diverse abilities to enjoy the game. Features such as alternative text for images, audio cues, and adjustable font sizes could be added in future updates.
-
-### 4. **Multi-Currency Support**
-
+### 1. **Multi-Currency Support**
 While the game currently deals with Bitcoin, future versions could include other cryptocurrencies like Ethereum, Litecoin, or others. Implementing multi-currency support would allow users to predict the price changes of different cryptocurrencies, broadening the scope and appeal of the game. 
 
-### 5. **Real-Time Notifications**
+### 2. **Leaderboard & Social Features**
+To foster competition and user engagement, a global leaderboard could be added where players can see how their scores compare with others. 
 
-To enhance the game’s engagement, real-time notifications (e.g., via push notifications or in-app notifications) can be implemented. Users could receive updates about significant price movements or other important game events. This would encourage users to return and participate more frequently in the game.
-
-### 6. **Leaderboard & Social Features**
-
-To foster competition and user engagement, a global leaderboard could be added where players can see how their scores compare with others. Social features like sharing scores on social media, connecting with friends, and tracking personal progress can help build a community around the game.
+### 3. **Login using google or social profile**
+Enabling the user to use their google or social profile instead of having to create account
 
 These features would not only improve the user experience but also provide greater scalability and ensure the game remains relevant as technology and user expectations evolve.
 
