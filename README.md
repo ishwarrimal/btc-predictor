@@ -2,6 +2,8 @@
 
 [![Deploy to GitHub Pages](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml/badge.svg)](https://github.com/ishwarrimal/btc-predictor/actions/workflows/deploy.yml)
 
+![alt text](resources/ScreenRecording2024-11-27at7.52.40AM-ezgif.com-video-to-gif-converter.gif)
+
 Game [Link](https://ishwarrimal.github.io/btc-predictor/)  
 **Screenshots attached at the end of readme**
 
@@ -36,6 +38,7 @@ This is a Bitcoin price prediction game where users predict whether the price of
 2. **Redux**: Used for state management, especially for handling the requests for Bitcoin price updates and managing the game state.
 3. **TypeScript**: TypeScript is used to ensure type safety and better code quality.
 4. **React Testing Library (RTL)**: Used for testing React components.
+5. **Styled Components**: Used for styling the user interface.
 
 ### Authentication:
 
@@ -157,16 +160,16 @@ These features would not only improve the user experience but also provide great
 ## Screenshots
 
 Login Page
-![alt text](<Screenshot 2024-11-26 at 8.40.13 PM.png>)
+![alt text](<resources/Screenshot 2024-11-26 at 8.40.13 PM.png>)
 
 Game Page
-![alt text](<Screenshot 2024-11-26 at 8.40.32 PM.png>)
+![alt text](<resources/Screenshot 2024-11-26 at 8.40.32 PM.png>)
 
 Game Playing State
-![alt text](<Screenshot 2024-11-26 at 8.40.44 PM.png>)
+![alt text](<resources/Screenshot 2024-11-26 at 8.40.44 PM.png>)
 
 Game Result State
-![alt text](<Screenshot 2024-11-26 at 8.41.45 PM.png>)
+![alt text](<resources/Screenshot 2024-11-26 at 8.41.45 PM.png>)
 
 Game Rules
-![alt text](<Screenshot 2024-11-26 at 8.42.15 PM.png>)
+![alt text](<resources/Screenshot 2024-11-26 at 8.42.15 PM.png>)
