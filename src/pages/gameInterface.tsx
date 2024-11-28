@@ -18,11 +18,11 @@ import ScoreCard from '../components/ScoreCard';
 import { getUserScore, postUserScore } from '../api/gameScore';
 
 function GameInterface() {
+  const currentPriceRef = useRef<number>(0)
   let { userPrediction, currentBtcPrice, lockedBtcPrice, userScore } = useSelector((state: RootState) => state.game);
   const dispatch = useDispatch();
   const { signOut } = useAuthenticator()
-
-  const currentPriceRef = useRef(currentBtcPrice)
+  currentPriceRef.current = currentBtcPrice
 
   useEffect(() => {
     fetchCryptoPrice(dispatch);
@@ -36,7 +36,7 @@ function GameInterface() {
       const interval = setInterval(() => {
         const secondsPassed = Math.floor((Date.now() - startTime) / SECONDS_IN_MS);
         dispatch(setTimer(30 - secondsPassed));
-        if (secondsPassed >= 30) {
+        if (secondsPassed >= 10) {
           clearInterval(interval);
           checkAndUpdateResult();
         }

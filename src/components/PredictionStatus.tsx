@@ -30,7 +30,7 @@ const PredictionContainer = styled.div`
   }
 `;
 
-const GameResult = styled.div<{ isSuccess: boolean }>`
+const GameResult = styled.div<{ isSuccess?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
