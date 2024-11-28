@@ -36,7 +36,7 @@ function GameInterface() {
       const interval = setInterval(() => {
         const secondsPassed = Math.floor((Date.now() - startTime) / SECONDS_IN_MS);
         dispatch(setTimer(30 - secondsPassed));
-        if (secondsPassed >= 10) {
+        if (secondsPassed >= 30) {
           clearInterval(interval);
           checkAndUpdateResult();
         }
