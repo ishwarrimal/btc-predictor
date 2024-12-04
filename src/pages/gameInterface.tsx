@@ -73,7 +73,7 @@ function GameInterface() {
       <CurrentPriceCard/>
       <ScoreCard />
       <GamePlayArea />
-       <StyledLogout onClick={signOut}><IoMdExit /> Logout</StyledLogout>
+      <StyledLogout onClick={signOut}><IoMdExit /> Logout</StyledLogout>
     </GameInterfaceWrapper>
   );
 }
@@ -88,14 +88,28 @@ export const GameInterfaceWrapper = styled.div`
     padding: 24px;
 `;
 
-const StyledLogout = styled.div`
+const StyledLogout = styled.button`
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   cursor: pointer;
   background: #aaa;
-  padding: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
   border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background: #888; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+  }
+
+  &:active {
+    transform: scale(0.98); /* Slight "press" effect */
+  }
 `;
+
 
 export default withAuthenticator(GameInterface);
